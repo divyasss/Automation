@@ -1,0 +1,42 @@
+package org.mascrn.Scrnsht;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Webtable {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\eclipse-workspace\\Scrnsht\\Driver\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://www.toolsqa.com/automation-practice-table");
+		System.out.println("===All Data===");
+		List<WebElement> allData = driver.findElements(By.xpath("//table[@summary='Sample Table']/tbody/tr/td"));
+		for(WebElement data:allData) {
+			String text = data.getText();
+			System.out.println(text);
+		}
+		
+		System.out.println("===particular data===");
+		WebElement pData=driver.findElement(By.xpath("//table[@summary='Sample Table']/tbody/tr[2]/td[2]"));
+		String text = pData.getText();
+		System.out.println(text);
+		
+		System.out.println("===rowwise data===");
+		List<WebElement> rowwisedata = driver.findElements(By.xpath("//table[@summary='Sample Table']/tbody/tr[2]/td"));
+		for(WebElement data:rowwisedata) {
+			String text1 = data.getText();
+			System.out.println(text1);			
+		}
+		System.out.println("===columnwise data===");
+		List<WebElement> columnwisedata = driver.findElements(By.xpath("//table[@summary='Sample Table']/tbody/tr/td[3]"));
+		for(WebElement data:columnwisedata) {
+			String text2 = data.getText();
+			System.out.println(text2);
+		}
+		
+	}
+
+}

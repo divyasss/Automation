@@ -1,0 +1,36 @@
+package com.cucumber.pom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Address {
+	WebDriver driver;
+	public Address(WebDriver ldriver) {
+		this.driver=ldriver;
+		PageFactory.initElements(driver, this);
+	}
+	@FindBy(name="same")
+	private WebElement Addresscheckbox;
+	@FindBy(xpath="(//li[text()='dddd s'])[1]")
+	private WebElement Deliveryaddress;
+	@FindBy(xpath="(//li[text()='dddd s'])[2]")
+	private WebElement Billingaddress;
+	@FindBy(xpath="//span[text()='Proceed to checkout']")
+	private WebElement Proceedtocheckoutaddress;
+	public WebElement getAddresscheckbox() {
+		return Addresscheckbox;
+	}
+	public WebElement getDeliveryaddress() {
+		return Deliveryaddress;
+	}
+	public WebElement getBillingaddress() {
+		return Billingaddress;
+	}
+	public WebElement getProceedtocheckoutaddress() {
+		return Proceedtocheckoutaddress;
+	}
+	
+
+}

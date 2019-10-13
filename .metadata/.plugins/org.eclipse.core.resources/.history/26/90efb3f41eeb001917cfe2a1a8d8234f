@@ -1,0 +1,53 @@
+package org.mascrn.Scrnsht;
+
+import org.junit.AfterClass;
+import org.junit.Assert;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+
+
+public class Asserjunit {
+	@BeforeClass
+	public void setUp() {
+		System.out.println("driven initialization");
+	}
+	@Test
+	public void test1() {
+		String s="Thank you placing the order";
+		Assert.assertEquals("Thank you place the order", s);
+	}
+	@Test
+	public void test2() {
+		String s="Hello ABC";
+		Assert.assertTrue(s.contains("Hi"));
+
+	}
+	@Test
+	public void test3() {
+		String s="Thank you place the order";
+		Assert.assertNotEquals("Thank you place the order", s);
+	}
+	
+	@Test
+	public void test4() {
+		String s="Hello ABC";
+		Assert.assertFalse(s.contains("Hello"));		
+
+	}
+	@Test
+	public void test5() {
+		String s=null;
+		Assert.assertNotNull(s);
+	}
+	@Test
+	public void test6() {
+		Assert.fail("comparison failure");
+	}
+	@AfterClass
+	public static void close() {
+		System.out.println("Drivere quit");
+
+	}
+
+}

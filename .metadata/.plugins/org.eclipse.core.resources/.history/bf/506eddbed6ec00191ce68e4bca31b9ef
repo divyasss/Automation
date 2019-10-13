@@ -1,0 +1,222 @@
+package com.cucumber.stepdefinition;
+
+import org.openqa.selenium.WebDriver;
+
+import com.cucumber.baseclass.BaseClass;
+import com.cucumber.pom.Address;
+import com.cucumber.pom.Paymentbtn;
+import com.cucumber.pom.Select_dresses;
+import com.cucumber.pom.Shipping;
+import com.cucumber.pom.Signin;
+import com.cucumber.pom.Signout;
+import com.cucumber.pom.Summarypage;
+import com.cucumber.runner.TestRunner;
+
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class Stepdefinition extends BaseClass{
+	public WebDriver driver;
+	
+	@Given("^user should be in automation practice$")
+	public void user_should_be_in_automation_practice() throws Throwable {
+	    Signin sin=new Signin(driver);
+	    getUrl("http://automationpractice.com/index.php?");
+	    //throw new PendingException();
+	}
+
+	
+
+	@When("^user should click signin button in home page$")
+	public void user_should_click_signin_button_in_home_page() throws Throwable {
+		Signin sin=new Signin(driver);
+		clickElement(sin.getSigninbtn());
+	    throw new PendingException();
+	}
+
+	@When("^user enter the email address in the email field in signin page$")
+	public void user_enter_the_email_address_in_the_email_field_in_signin_page() throws Throwable {
+		Signin sin=new Signin(driver);
+		sendkeys(sin.getEmailaddress(),"cccc@gmail.com");
+	    throw new PendingException();
+	}
+
+	@When("^user enter the password in password field in signin page$")
+	public void user_enter_the_password_in_password_field_in_signin_page() throws Throwable {
+		Signin sin=new Signin(driver);
+		sendkeys(sin.getPassword(),"11111");
+	    throw new PendingException();
+	}
+
+	@When("^user click on the sigin button in the signin page$")
+	public void user_click_on_the_sigin_button_in_the_signin_page() throws Throwable {
+		Signin sin=new Signin(driver);
+		click(sin.getSigninbtn());
+	    throw new PendingException();
+	}
+
+	/*@When("^user wait for (.*) seconds for page load$")
+	public void user_wait_for_seconds_for_page_load(int arg1) throws Throwable {
+		Signin sin=new Signin(driver);
+		
+	    throw new PendingException();
+	}*/
+
+	
+	@Given("^user should be in my account page$")
+	public void user_should_be_in_my_account_page() throws Throwable {
+		Select_dresses sd=new Select_dresses(driver);
+		elementisDisplayed(sd.getUsername());
+		
+	    throw new PendingException();
+	}
+
+	@When("^user should click dresses button in my account page$")
+	public void user_should_click_dresses_button_in_my_account_page() throws Throwable {
+		Select_dresses sd=new Select_dresses(driver);
+		mousehover(sd.getDress_btn());
+		clickElement(sd.getDress_btn());
+	    throw new PendingException();
+	}
+
+	@When("^user should click summer dress button$")
+	public void user_should_click_summer_dress_button() throws Throwable {
+		Select_dresses sd=new Select_dresses(driver);
+		mousehover(sd.getSummerdress_btn());
+		clickElement(sd.getSummerdress_btn());
+	    throw new PendingException();
+	}
+
+	@When("^user should click on quick view$")
+	public void user_should_click_on_quick_view() throws Throwable {
+		Select_dresses sd=new Select_dresses(driver);
+		clickElement(sd.getSummerdress_btn());
+	    throw new PendingException();
+	}
+
+	@Then("^user should verify the selected dress is displayed$")
+	public void user_should_verify_the_selected_dress_is_displayed() throws Throwable {
+		Select_dresses sd=new Select_dresses(driver);
+		elementisDisplayed(sd.getVerifyimg());
+	    throw new PendingException();
+	}
+
+	@Then("^user select the quantity$")
+	public void user_select_the_quantity() throws Throwable {
+		Select_dresses sd=new Select_dresses(driver);
+		clickElement(sd.getQuantityplus());
+	    throw new PendingException();
+	}
+
+	@Then("^user should select the color$")
+	public void user_should_select_the_color() throws Throwable {
+		Select_dresses sd=new Select_dresses(driver);
+		clickElement(sd.getColorblack());
+	    throw new PendingException();
+	}
+
+	@Then("^user should select the size$")
+	public void user_should_select_the_size() throws Throwable {
+		Select_dresses sd=new Select_dresses(driver);
+		dropdown(sd.getSize(),"S","1");
+	    throw new PendingException();
+	}
+
+	@Then("^click on the add to cart button$")
+	public void click_on_the_add_to_cart_button() throws Throwable {
+		Select_dresses sd=new Select_dresses(driver);
+		clickElement(sd.getAddtocartinquickview());
+	    throw new PendingException();
+	}
+
+	/*@Then("^user should verify the placed order is correct$")
+	public void user_should_verify_the_placed_order_is_correct() throws Throwable {
+	    
+	    elementisDisplayed(sp.getDescription());
+	    throw new PendingException();
+	}*/
+
+	@Then("^user should click on proceed to checkout button$")
+	public void user_should_click_on_proceed_to_checkout_button() throws Throwable {
+		Select_dresses sd=new Select_dresses(driver);
+		clickElement(sd.getProceedtocheckoutinquickview());
+		
+	    throw new PendingException();
+	}
+
+	@Then("^user should verify the description$")
+	public void user_should_verify_the_description() throws Throwable {
+	    Summarypage sum=new Summarypage(driver);
+	    elementisDisplayed(sum.getDescription());
+	    throw new PendingException();
+	}
+
+	@Then("^user should click on proceed to checkout$")
+	public void user_should_click_on_proceed_to_checkout() throws Throwable {
+		Summarypage sum=new Summarypage(driver);
+		clickElement(sum.getProceed_btn());
+	    throw new PendingException();
+	}
+
+	@When("^user should click on the address checkbox$")
+	public void user_should_click_on_the_address_checkbox() throws Throwable {
+		Address add=new Address(driver);
+		clickElement(add.getAddresscheckbox());
+		
+	    throw new PendingException();
+	}
+
+	@Then("^verify billing address and delivery address$")
+	public void verify_billing_address_and_delivery_address() throws Throwable {
+		Address add=new Address(driver);
+		elementisDisplayed(add.getBillingaddress());
+		elementisDisplayed(add.getDeliveryaddress());
+	    throw new PendingException();
+	}
+
+	@Then("^user should click proceed to checkout buttton$")
+	public void user_should_click_proceed_to_checkout_buttton() throws Throwable {
+		Address add=new Address(driver);
+		clickElement(add.getProceedtocheckoutaddress());
+	    throw new PendingException();
+	}
+
+	@Then("^user should agree the terms of condition$")
+	public void user_should_agree_the_terms_of_condition() throws Throwable {
+	    Shipping shi=new Shipping(driver);
+	    clickElement(shi.getShippingcheckbx());
+	    throw new PendingException();
+	}
+
+	@Then("^user should click proceed to checkout button$")
+	public void user_should_click_proceed_to_checkout_button() throws Throwable {
+		Shipping shi=new Shipping(driver);
+		clickElement(shi.getProceedinshipping());
+	    throw new PendingException();
+	}
+
+	@When("^user should click on the pay by bankwire$")
+	public void user_should_click_on_the_pay_by_bankwire() throws Throwable {
+	    Paymentbtn pa=new Paymentbtn(driver);
+	    clickElement(pa.getPaybank());
+	    throw new PendingException();
+	}
+
+	@When("^user should click on confirm my order button$")
+	public void user_should_click_on_confirm_my_order_button() throws Throwable {
+		Paymentbtn pa=new Paymentbtn(driver);
+		clickElement(pa.getConfrim());
+	    throw new PendingException();
+	}
+
+	@When("^user should click signout button in my account page$")
+	public void user_should_click_signout_button_in_my_account_page() throws Throwable {
+	    Signout so=new Signout(driver);
+	    clickElement(so.getSignout_btn());
+	    throw new PendingException();
+	}
+
+
+}

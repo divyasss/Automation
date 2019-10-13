@@ -1,0 +1,67 @@
+package com.cucumber.pom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Select_dresses {
+	WebDriver driver;
+	public Select_dresses(WebDriver ldriver) {
+		this.driver=ldriver;
+		PageFactory.initElements(driver, this);
+	}
+	@FindBy(xpath="//span[text()='dddd s']")
+	private WebElement Username;
+	@FindBy(xpath="(//a[@title='Dresses'])[2]")
+	private WebElement Dress_btn;
+	@FindBy(xpath="(//a[@title='Summer Dresses'])[2]")
+	private WebElement Summerdress_btn;
+	@FindBy(xpath="(//span[text()='Quick view'])[1]")
+	private WebElement Quickview;
+	@FindBy(id="bigpic")
+	private WebElement Verifyimg;
+	@FindBy(xpath="//i[@class='icon-plus']")
+	private WebElement Quantityplus;
+	@FindBy(id="group_1")
+	private WebElement Size;
+	@FindBy(xpath="color_11")
+	private WebElement colorblack;
+	@FindBy(xpath="//button[@class='exclusive']")
+	private WebElement Addtocartinquickview;
+	@FindBy(xpath="//a[@title=\"Proceed to checkout\"]")
+	private WebElement Proceedtocheckoutinquickview;
+	
+	public WebElement getUsername() {
+		return Username;
+	}
+	public WebElement getDress_btn() {
+		return Dress_btn;
+	}
+	public WebElement getSummerdress_btn() {
+		return Summerdress_btn;
+	}
+	public WebElement getQuickview() {
+		return Quickview;
+	}
+	public WebElement getVerifyimg() {
+		return Verifyimg;
+	}
+	public WebElement getQuantityplus() {
+		return Quantityplus;
+	}
+	public WebElement getSize() {
+		return Size;
+	}
+	public WebElement getColorblack() {
+		return colorblack;
+	}
+	public WebElement getAddtocartinquickview() {
+		return Addtocartinquickview;
+	}
+	public WebElement getProceedtocheckoutinquickview() {
+		return Proceedtocheckoutinquickview;
+	}
+	
+}

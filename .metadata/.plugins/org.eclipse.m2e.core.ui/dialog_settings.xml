@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item value="All Catalogs" key="catalog"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\User\eclipse-workspace\Scrnsht\src\main\java\org\mascrn\Scrnsht"/>
+			<item value="C:\Users\User\eclipse-workspace\Scrnsht"/>
+			<item value="C:\Users\User\eclipse-workspace\Javdemo\src\org\demo\Demojav.java"/>
+			<item value="C:\Users\User\eclipse-workspace\Mademoo"/>
+			<item value="C:\Users\User\eclipse-workspace\Sedemo\src\org\demmm\Sedemmo.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="org.baseclass.Windowhandling"/>
+			<item value="org.baseclass.Webtable"/>
+			<item value="org.baseclass.Baseclass"/>
+			<item value="org.cudemo.Cucdemo"/>
+			<item value="org.cudemo.Cudemo"/>
+			<item value="org.jjunt.Demo"/>
+			<item value="org.mascrn.Scrnsht"/>
+			<item value="org.mascrn.Scrnshot"/>
+			<item value="org.maa.Abcccc"/>
+			<item value="org.mademmmoo.Mavdemo"/>
+			<item value="org.mademo.Mademoo"/>
+		</list>
+		<list key="groupId">
+			<item value="org.baseclass"/>
+			<item value="org.cudemo"/>
+			<item value="org.jjunt"/>
+			<item value="org.mascrn"/>
+			<item value="org.maa"/>
+			<item value="org.mademmmoo"/>
+			<item value="org.mademo"/>
+		</list>
+		<list key="artifactId">
+			<item value="Windowhandling"/>
+			<item value="Webtable"/>
+			<item value="Baseclass"/>
+			<item value="Cucdemo"/>
+			<item value="Cudemo"/>
+			<item value="Demo"/>
+			<item value="Scrnsht"/>
+			<item value="Scrnshot"/>
+			<item value="Abcccc"/>
+			<item value="Mavdemo"/>
+			<item value="Mademoo"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>
